@@ -9,6 +9,16 @@ Stickman Kino ships four [agent skills](../skills): plain-Markdown playbooks any
 | [`stickman-animator`](../skills/stickman-animator/SKILL.md) | storyboard → `scenes.js` using the engine, synced to the VO |
 | [`stickman-sound`](../skills/stickman-sound/SKILL.md) | voices, music, SFX, loudness |
 
+## What counts as an "agent"
+
+Stickman Kino needs an AI coding agent that can **read and write files and run terminal commands on your computer**. That agent is the only AI involved: it writes the script and the scene code, and the engine renders the frames locally.
+
+| Works | Doesn't work on its own |
+|---|---|
+| Claude Code, OpenAI Codex CLI, Cursor, Windsurf, GitHub Copilot (agent mode), Gemini CLI, Aider | chat-only web apps (ChatGPT, claude.ai, Gemini web): they can't run the renderer, but they can draft `film.json` / `scenes.js` that you then build with `stickman build` |
+
+Cloud-hosted coding agents (e.g. agents that run in a remote sandbox) may work if the sandbox can install Node and Chrome, but they're untested.
+
 ## The fastest path: open the repo and ask
 
 Every agent below reads `AGENTS.md` and/or `CLAUDE.md` at the repo root, which points it at the skills. So:

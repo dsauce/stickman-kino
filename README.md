@@ -5,17 +5,17 @@
 
 # Stickman films, directed by your AI agent, rendered as code.
 
-<img src="docs/images/promise.png" alt="One prompt in. A finished video out. Written, voiced, scored, animated, rendered. No video model, no API keys, no credits, no cloud: just your coding agent and your laptop." width="860">
+<img src="docs/images/promise.png" alt="One prompt in. A finished video out. Written, voiced, scored, animated, rendered. No video-generation model, no video API, no per-video credits, renders locally. Powered by the coding agent you already use." width="860">
 
 ### ✍️ One prompt in → 🎞️ a finished, voiced, scored, animated video out.
-### 🚫 No video-generation model · 🚫 No API keys · 🚫 No credits · 🚫 No cloud
-**Just your coding agent and your laptop.**
+### 🚫 No video-generation model · 🚫 No video API · 🚫 No per-video credits · 🖥️ Renders on your machine
+**The only AI you need is the coding agent you already use:** Claude Code, Codex, Cursor, Gemini CLI, Copilot, Windsurf…
 
 [![CI](https://github.com/dsauce/stickman-kino/actions/workflows/ci.yml/badge.svg)](https://github.com/dsauce/stickman-kino/actions/workflows/ci.yml)
 [![Stars](https://img.shields.io/github/stars/dsauce/stickman-kino?style=flat&logo=github&color=f2b400)](https://github.com/dsauce/stickman-kino/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a.svg)](LICENSE)
 ![Video-gen APIs](https://img.shields.io/badge/video--gen%20APIs-zero-e63946)
-![Cost per video](https://img.shields.io/badge/cost%20per%20video-%240-111)
+![Render cost](https://img.shields.io/badge/render%20cost-%240%20%28local%29-111)
 ![Props](https://img.shields.io/badge/props-202-1d7fe0)
 ![Poses](https://img.shields.io/badge/poses-58-6c4bff)
 
@@ -28,8 +28,8 @@
 
 > [!IMPORTANT]
 > ### 🚫 Zero video-generation AI. Not a single frame is "generated".
-> No Sora. No Veo. No Runway, Kling or Pika. **No video API, no model weights to download, no credits to buy, no rate limits, no waiting in a queue.**
-> Stickman Kino is an *animation engine*: it draws every frame from code, on your machine, the way a game engine draws a game. Your coding agent writes that code. So every video is **free, private, deterministic and fully editable**, down to a single frame, a single word or a single colour.
+> No Sora. No Veo. No Runway, Kling or Pika. **No video API, no video credits to buy, no render queue, no uploading your ideas to a video service.**
+> Stickman Kino is an *animation engine*: it draws every frame from code, on your machine, the way a game engine draws a game. The only AI in the loop is your coding agent, which writes the script and that code. So every video is **free, private, deterministic and fully editable**, down to a single frame, a single word or a single colour.
 
 ---
 
@@ -55,8 +55,8 @@ That's exactly how the film above was made. Want vertical for TikTok? A British 
 <table>
 <tr><td width="33%" valign="top">
 
-### 🆓 Actually free
-Rendering, voice (local neural TTS), music and sound effects all run on your machine. The music and SFX are **synthesised from code**, so there's nothing to license and nothing to get copyright-struck.
+### 🆓 No per-video cost
+Rendering, voice (local neural TTS), music and sound effects all run on your machine, so a film costs nothing beyond the coding agent you already use. The music and SFX are **synthesised from code**: nothing to license, nothing to get copyright-struck.
 
 </td><td width="33%" valign="top">
 
@@ -78,9 +78,9 @@ Four battle-tested skills (director, animator, sound, producer) teach any coding
 | Fix one moment without regenerating | ✅ | ❌ | ✅ |
 | Voice-over synced to the action | hours | random | ✅ word-level cues |
 | Licence-free music & SFX | 💸 | - | ✅ generated |
-| API keys / credits / cloud | - | required | **none** |
+| Video-generation API, keys or credits | - | required | **none** |
 | From a plain-English prompt | ❌ | ✅ | ✅ |
-| Cost per minute of video | hours of work | credits | **$0** |
+| Extra cost per video | hours of work | credits per clip | **$0** (beyond your agent) |
 
 ## 🧰 What's in the box
 
@@ -146,6 +146,8 @@ npm install
 node bin/stickman.mjs setup                    # Chrome libs + free local voice (no sudo, no API keys)
 node bin/stickman.mjs build samples/chorus     # → samples/chorus/renders/chorus.mp4
 ```
+
+**What you need:** Node 18+ and a coding agent that can run terminal commands on your computer (Claude Code, Codex CLI, Cursor, Gemini CLI, Copilot agent mode, Windsurf…). Chat-only web apps like ChatGPT or claude.ai can't run the renderer themselves; they can draft `film.json` and `scenes.js` for you to build with the CLI. Cloud coding agents may work but are untested.
 
 Now open the folder in your agent and ask for *your* film. Or install the skills everywhere:
 

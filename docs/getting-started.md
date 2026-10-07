@@ -1,6 +1,6 @@
 # Getting started
 
-> **No video-generation AI is involved, anywhere.** Stickman Kino never calls Sora, Veo, Runway, Kling or any other video model or API. It draws every frame itself, from code, on your machine. No keys, no credits, no uploads.
+> **No video-generation AI is involved, anywhere.** Stickman Kino never calls Sora, Veo, Runway, Kling or any other video model or API. It draws every frame itself, from code, on your machine: no video API keys, no video credits, no uploads. The only AI in the loop is the coding agent you use to direct it.
 
 ## Requirements
 
