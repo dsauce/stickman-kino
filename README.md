@@ -19,10 +19,10 @@
 ![Props](https://img.shields.io/badge/props-202-1d7fe0)
 ![Poses](https://img.shields.io/badge/poses-58-6c4bff)
 
-<a href="docs/media/chorus.mp4"><img src="docs/images/chorus.gif" alt="Chorus - a 58-second stickman ad made with Stickman Kino" width="860"></a>
+<a href="https://dsauce.github.io/stickman-kino/#chorus"><img src="docs/images/chorus.gif" alt="Chorus - a 58-second stickman ad made with Stickman Kino" width="860"></a>
 
 **▲ "Chorus", a 58-second ad for a made-up app.** Script, storyboard, voice, music, animation and edit were produced by an AI agent running Stickman Kino, from a short brief.<br>
-<sub>Every frame is code. <a href="docs/media/chorus.mp4"><b>▶ Watch with sound</b></a> · <a href="samples/chorus/film.json">film.json</a> · <a href="samples/chorus/scenes.js">scenes.js</a></sub>
+<sub>Every frame is code. <a href="https://dsauce.github.io/stickman-kino/#chorus"><b>▶ Watch with sound</b></a> · <a href="samples/chorus/film.json">film.json</a> · <a href="samples/chorus/scenes.js">scenes.js</a></sub>
 
 </div>
 
@@ -112,7 +112,7 @@ Four battle-tested skills (director, animator, sound, producer) teach any coding
 </table>
 
 <div align="center">
-<a href="docs/media/titles.mp4"><img src="docs/images/titles.gif" alt="Intro and outro presets" width="560"></a><br>
+<a href="https://dsauce.github.io/stickman-kino/#titles"><img src="docs/images/titles.gif" alt="Intro and outro presets" width="560"></a><br>
 <sub>The 8 intro/outro presets. <a href="samples/titles/film.json">This whole film is 18 lines of JSON</a>, no scene code.</sub>
 </div>
 
@@ -120,7 +120,7 @@ Four battle-tested skills (director, animator, sound, producer) teach any coding
 
 | Hello, Stickman · 15 s | Compound interest · 50 s | The 2-minute rule · 9:16 | Showcase · 44 s |
 |:---:|:---:|:---:|:---:|
-| <a href="docs/media/hello-stickman.mp4"><img src="docs/images/hello-stickman.gif" width="220" alt="Hello Stickman"></a> | <a href="docs/media/compound-interest.mp4"><img src="docs/images/compound-interest.gif" width="220" alt="Compound interest explainer"></a> | <a href="docs/media/two-minute-rule.mp4"><img src="docs/images/two-minute-rule.gif" width="110" alt="Vertical short"></a> | <a href="docs/media/showcase.mp4"><img src="docs/images/showcase.gif" width="220" alt="Showcase"></a> |
+| <a href="https://dsauce.github.io/stickman-kino/#hello-stickman"><img src="docs/images/hello-stickman.gif" width="220" alt="Hello Stickman"></a> | <a href="https://dsauce.github.io/stickman-kino/#compound-interest"><img src="docs/images/compound-interest.gif" width="220" alt="Compound interest explainer"></a> | <a href="https://dsauce.github.io/stickman-kino/#two-minute-rule"><img src="docs/images/two-minute-rule.gif" width="110" alt="Vertical short"></a> | <a href="https://dsauce.github.io/stickman-kino/#showcase"><img src="docs/images/showcase.gif" width="220" alt="Showcase"></a> |
 | the smallest film: start here | paper theme, charts, British voice | dark theme, pop captions, TikTok-ready | three themes, camera follow, logo outro |
 
 <details>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stickman Kino: watch the films</title>
+  <meta name="description" content="Stickman films, directed by your AI agent, rendered as code. No video-generation AI.">
+  <meta property="og:title" content="Stickman Kino">
+  <meta property="og:description" content="Stickman films, directed by your AI agent, rendered as code. No video-generation AI.">
+  <meta property="og:image" content="https://dsauce.github.io/stickman-kino/images/chorus-poster.jpg">
+  <link rel="icon" href="images/icon-128.png">
+  <style>
+    :root { --ink: #111; --muted: #666; --red: #E63946; --gold: #FFC531; --bg: #fff; --soft: #F4F4F5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 20px 64px; }
+    header { text-align: center; }
+    header img { width: min(460px, 90%); }
+    h1 { font-size: clamp(28px, 4vw, 44px); margin: 12px 0 8px; letter-spacing: -0.02em; }
+    .tag { color: var(--muted); font-size: 18px; margin: 0 0 18px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 26px; }
+    .pill { padding: 7px 14px; border-radius: 999px; font-weight: 700; font-size: 14px; color: #fff; background: var(--red); }
+    .pill.ok { background: #1F9D55; }
+    .hero { background: #111; border-radius: 20px; padding: 14px; box-shadow: 0 10px 40px rgba(0,0,0,.18); }
+    .hero video { width: 100%; border-radius: 12px; display: block; background: #000; }
+    .caption { text-align: center; color: var(--muted); margin: 14px 0 0; font-size: 15px; }
+    .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 28px 0 44px; }
+    .btn { text-decoration: none; padding: 12px 22px; border-radius: 999px; font-weight: 800; border: 2px solid var(--ink); }
+    .btn.primary { background: var(--ink); color: #fff; }
+    h2 { font-size: 26px; margin: 0 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+    .card { background: var(--soft); border-radius: 16px; padding: 12px; }
+    .card video { width: 100%; border-radius: 10px; display: block; background: #000; }
+    .card.portrait video { max-height: 520px; width: auto; margin: 0 auto; }
+    .card h3 { margin: 12px 4px 4px; font-size: 18px; }
+    .card p { margin: 0 4px 6px; color: var(--muted); font-size: 14px; }
+    .card a.src { font-size: 13px; color: var(--muted); margin-left: 4px; }
+    footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 56px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="https://github.com/dsauce/stickman-kino"><img src="images/logo.png" alt="Stickman Kino"></a>
+      <h1>One prompt in. A finished video out.</h1>
+      <p class="tag">Every film below was written, voiced, scored and animated by an AI coding agent using Stickman Kino. Every frame is code.</p>
+      <div class="pills">
+        <span class="pill">✕ No video-gen model</span><span class="pill">✕ No video API</span><span class="pill">✕ No per-video credits</span><span class="pill ok">✓ Renders locally</span>
+      </div>
+    </header>
+
+    <section id="chorus" class="hero">
+      <video controls playsinline preload="metadata" poster="images/chorus-poster.jpg" src="media/chorus.mp4"></video>
+    </section>
+    <p class="caption"><b>Chorus</b>, a 58-second ad for a made-up app (16:9). Turn the sound on. <a href="https://github.com/dsauce/stickman-kino/tree/main/samples/chorus">See the two files that make it</a>.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/dsauce/stickman-kino">⭐ Star on GitHub</a>
+      <a class="btn" href="https://github.com/dsauce/stickman-kino#-quick-start">Make your own</a>
+    </div>
+
+    <h2>More films</h2>
+    <div class="grid">
+      <div class="card" id="showcase">
+        <video controls playsinline preload="none" poster="images/showcase-poster.jpg" src="media/showcase.mp4"></video>
+        <h3>Showcase · 44 s</h3><p>Three themes, a camera-follow run, a feature list and a logo outro.</p>
+        <a class="src" href="https://github.com/dsauce/stickman-kino/tree/main/samples/showcase">source</a>
+      </div>
+      <div class="card" id="compound-interest">
+        <video controls playsinline preload="none" poster="images/compound-interest-poster.jpg" src="media/compound-interest.mp4"></video>
+        <h3>Compound interest · 50 s</h3><p>Paper theme, charts, a rolling snowball, British narrator.</p>
+        <a class="src" href="https://github.com/dsauce/stickman-kino/tree/main/samples/compound-interest">source</a>
+      </div>
+      <div class="card portrait" id="two-minute-rule">
+        <video controls playsinline preload="none" poster="images/two-minute-rule-poster.jpg" src="media/two-minute-rule.mp4"></video>
+        <h3>The 2-minute rule · 9:16 · 21 s</h3><p>A vertical short with pop captions, ready for TikTok, Reels and Shorts.</p>
+        <a class="src" href="https://github.com/dsauce/stickman-kino/tree/main/samples/two-minute-rule">source</a>
+      </div>
+      <div class="card" id="titles">
+        <video controls playsinline preload="none" poster="images/titles-poster.jpg" src="media/titles.mp4"></video>
+        <h3>Intros &amp; outros · 33 s</h3><p>All 8 title-sequence presets, declared in 18 lines of JSON.</p>
+        <a class="src" href="https://github.com/dsauce/stickman-kino/tree/main/samples/titles">source</a>
+      </div>
+      <div class="card" id="hello-stickman">
+        <video controls playsinline preload="none" poster="images/hello-stickman-poster.jpg" src="media/hello-stickman.mp4"></video>
+        <h3>Hello, Stickman · 15 s</h3><p>The smallest complete film. Start here.</p>
+        <a class="src" href="https://github.com/dsauce/stickman-kino/tree/main/samples/hello-stickman">source</a>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://github.com/dsauce/stickman-kino">github.com/dsauce/stickman-kino</a> · MIT licensed · Chorus is a fictional product<br>
+      Built by <a href="https://preritahuja.com/">Prerit Ahuja</a> · <a href="https://www.linkedin.com/in/ahujaprerit/">LinkedIn</a>
+    </footer>
+  </div>
+</body>
+</html>
