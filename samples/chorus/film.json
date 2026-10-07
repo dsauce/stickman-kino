@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Chorus \u2014 chores, in harmony",
+  "format": "16:9",
+  "theme": {
+    "extends": "light",
+    "accents": [
+      "#FF4D5E",
+      "#6C4BFF",
+      "#FFB020"
+    ],
+    "soft": "#F1EEFF",
+    "muted": "#676170"
+  },
+  "voice": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1.0
+  },
+  "music": {
+    "style": "pop",
+    "volume": 1,
+    "lufs": -25
+  },
+  "clips": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "intro": {
+        "style": "countdown",
+        "title": "Whose [turn] is it?",
+        "kicker": "a very short film about chores",
+        "size": 150
+      }
+    },
+    {
+      "id": "standoff",
+      "label": "Hook",
+      "duration": "auto",
+      "vo": "It's eleven at night. The sink is full, again. And everyone in this house is absolutely, completely sure\u2026 it wasn't them.",
+      "visual": "Night kitchen: a dish tower grows in the sink; three housemates point at each other; 'Not me!' bubbles pop.",
+      "sfx": [
+        {
+          "at": 0.6,
+          "name": "typewriter",
+          "volume": 0.25
+        },
+        {
+          "at": 1.85,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 2.2,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 2.55,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 6.4,
+          "name": "pop",
+          "volume": 0.35
+        },
+        {
+          "at": 6.62,
+          "name": "pop",
+          "volume": 0.35
+        },
+        {
+          "at": 6.84,
+          "name": "pop",
+          "volume": 0.35
+        },
+        {
+          "at": 7.55,
+          "name": "swoosh",
+          "volume": 0.3
+        },
+        {
+          "at": 8.2,
+          "name": "impact",
+          "volume": 0.45
+        }
+      ],
+      "tail": 1.4
+    },
+    {
+      "id": "chaos",
+      "label": "Disrupt",
+      "duration": "auto",
+      "vo": "We tried sticky notes. A chore wheel. A forty message group chat. And it always ends the same way.",
+      "visual": "Sticky notes rain on the fridge, a chore wheel spins, chat bubbles flood in, then the three stand back to back, arms crossed.",
+      "sfx": [
+        {
+          "at": 0.85,
+          "name": "page",
+          "volume": 0.35
+        },
+        {
+          "at": 2.8,
+          "name": "zip",
+          "volume": 0.3
+        },
+        {
+          "at": 3.05,
+          "name": "notify",
+          "volume": 0.3
+        },
+        {
+          "at": 3.6,
+          "name": "notify",
+          "volume": 0.3
+        },
+        {
+          "at": 5.8,
+          "name": "impact",
+          "volume": 0.45
+        }
+      ],
+      "tail": 1.5
+    },
+    {
+      "id": "reveal",
+      "label": "Reveal",
+      "duration": "auto",
+      "vo": "So, meet Chorus. Add your home, add your people, and Chorus splits every single chore, fairly.",
+      "visual": "Ink wipe to the Chorus app on a giant phone: logo, home, three avatars, chores assign themselves evenly.",
+      "sfx": [
+        {
+          "at": 0.25,
+          "name": "whoosh",
+          "volume": 0.3
+        },
+        {
+          "at": 0.9,
+          "name": "sting",
+          "volume": 0.4
+        },
+        {
+          "at": 2.75,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 3.0,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 3.7,
+          "name": "swoosh",
+          "volume": 0.3
+        },
+        {
+          "at": 5.25,
+          "name": "success",
+          "volume": 0.38
+        }
+      ],
+      "tail": 1.5
+    },
+    {
+      "id": "features",
+      "label": "Payoff",
+      "duration": "auto",
+      "vo": "It remembers whose turn it is. It sends a friendly little nudge. And it turns every chore into points.",
+      "visual": "A turn arrow hops between avatars, a bell nudges the kid, coins fly into a growing leaderboard.",
+      "sfx": [
+        {
+          "at": 0.3,
+          "name": "pop",
+          "volume": 0.3
+        },
+        {
+          "at": 1.2,
+          "name": "boing",
+          "volume": 0.25
+        },
+        {
+          "at": 3.0,
+          "name": "notify",
+          "volume": 0.4
+        },
+        {
+          "at": 4.4,
+          "name": "coin",
+          "volume": 0.35
+        },
+        {
+          "at": 4.8,
+          "name": "coin",
+          "volume": 0.35
+        },
+        {
+          "at": 5.45,
+          "name": "pop",
+          "volume": 0.35
+        }
+      ],
+      "tail": 1.6
+    },
+    {
+      "id": "race",
+      "label": "Twist",
+      "duration": "auto",
+      "vo": "Win the week, and you pick Friday's movie. And suddenly? Everyone is racing to take out the trash.",
+      "visual": "Mia wins the trophy and movie night; Sam and Leo sprint with trash bags to the bin.",
+      "sfx": [
+        {
+          "at": 0.45,
+          "name": "success",
+          "volume": 0.38
+        },
+        {
+          "at": 0.8,
+          "name": "sparkle",
+          "volume": 0.3
+        },
+        {
+          "at": 3.0,
+          "name": "whoosh",
+          "volume": 0.4
+        },
+        {
+          "at": 4.2,
+          "name": "whoosh",
+          "volume": 0.35
+        },
+        {
+          "at": 6.4,
+          "name": "thud",
+          "volume": 0.45
+        },
+        {
+          "at": 6.6,
+          "name": "thud",
+          "volume": 0.4
+        }
+      ],
+      "tail": 2.0
+    },
+    {
+      "id": "lockup",
+      "label": "Product lockup",
+      "duration": "auto",
+      "tail": 1.8,
+      "vo": "Chorus. Chores, in harmony. Coming soon, to a very clean home near you.",
+      "visual": "Logo, name and tagline; the housemates cheer around a little house with hearts.",
+      "sfx": [
+        {
+          "at": 0.25,
+          "name": "chime",
+          "volume": 0.4
+        },
+        {
+          "at": 1.6,
+          "name": "sparkle",
+          "volume": 0.3
+        },
+        {
+          "at": 2.1,
+          "name": "pop",
+          "volume": 0.35
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "Made with Stickman Kino",
+      "outro": {
+        "style": "kino",
+        "url": "github.com/dsauce/stickman-kino",
+        "tagline": "this whole film is code \u00b7 open source \u00b7 free"
+      },
+      "duration": 5.6
+    }
+  ]
+}

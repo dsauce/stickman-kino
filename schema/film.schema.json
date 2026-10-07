@@ -1,0 +1,489 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/dsauce/stickman-kino/schema/film.schema.json",
+  "title": "Stickman Kino film",
+  "description": "Data contract for a Stickman Kino film. Choreography lives in scenes.js; everything else is here.",
+  "type": "object",
+  "required": [
+    "clips"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string",
+      "default": "en"
+    },
+    "format": {
+      "enum": [
+        "16:9",
+        "9:16",
+        "1:1",
+        "4:5",
+        "4:3"
+      ],
+      "default": "16:9",
+      "description": "16:9 = 1920\u00d71080, 9:16 = 1080\u00d71920, 1:1 = 1080\u00d71080, 4:5 = 1080\u00d71350, 4:3 = 1440\u00d71080"
+    },
+    "size": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "Custom [width, height]; overrides format (e.g. [1280, 640] for a social card)."
+    },
+    "fps": {
+      "type": "integer",
+      "enum": [
+        24,
+        25,
+        30,
+        50,
+        60
+      ],
+      "default": 30
+    },
+    "theme": {
+      "description": "Built-in theme name or a custom theme object.",
+      "oneOf": [
+        {
+          "enum": [
+            "light",
+            "dark",
+            "paper",
+            "chalkboard",
+            "blueprint",
+            "neon",
+            "studio",
+            "sunset"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "extends": {
+              "type": "string"
+            },
+            "bg": {
+              "type": "string"
+            },
+            "ink": {
+              "type": "string"
+            },
+            "paper": {
+              "type": "string"
+            },
+            "muted": {
+              "type": "string"
+            },
+            "soft": {
+              "type": "string"
+            },
+            "accents": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "font": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            },
+            "hand": {
+              "type": "string"
+            },
+            "decor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      ],
+      "default": "light"
+    },
+    "captions": {
+      "description": "Burned-in captions from the VO.",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "enum": [
+            "box",
+            "pop"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "style": {
+              "enum": [
+                "box",
+                "pop"
+              ]
+            },
+            "words": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "number"
+            },
+            "size": {
+              "type": "number"
+            }
+          }
+        }
+      ],
+      "default": false
+    },
+    "voice": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "enum": [
+            "kokoro",
+            "say",
+            "espeak",
+            "files",
+            "none"
+          ],
+          "default": "kokoro"
+        },
+        "voice": {
+          "type": "string",
+          "default": "am_michael",
+          "description": "Kokoro: am_michael, af_heart, af_nova, af_sky, am_adam, bm_george, bf_emma, bf_isabella, ef_dora, ff_siwis, jf_alpha, zf_xiaobei"
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 2,
+          "default": 1
+        },
+        "lang": {
+          "type": "string"
+        },
+        "lufs": {
+          "type": "number",
+          "default": -16
+        },
+        "volume": {
+          "type": "number",
+          "default": 1
+        }
+      }
+    },
+    "music": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "enum": [
+            "calm-piano",
+            "uplifting",
+            "lofi",
+            "corporate",
+            "playful",
+            "suspense",
+            "epic",
+            "ambient",
+            "pop",
+            "none"
+          ],
+          "default": "calm-piano"
+        },
+        "file": {
+          "type": "string",
+          "description": "Use your own track instead (path inside the film folder)."
+        },
+        "volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "default": 1
+        },
+        "bpm": {
+          "type": "number"
+        },
+        "key": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "lufs": {
+          "type": "number",
+          "default": -30
+        },
+        "promptDesc": {
+          "type": "string",
+          "description": "Music description used by `stickman prompts`."
+        }
+      }
+    },
+    "promptVoice": {
+      "type": "string",
+      "description": "Narrator description used by `stickman prompts`."
+    },
+    "sfx": {
+      "type": "array",
+      "description": "Film-wide sound effects (global time).",
+      "items": {
+        "$ref": "#/definitions/sfx"
+      }
+    },
+    "clips": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][\\w-]*$",
+            "description": "Scene id used in scenes.js: film.scene(id, sc => \u2026)"
+          },
+          "label": {
+            "type": "string"
+          },
+          "beat": {
+            "type": "string",
+            "description": "Narrative job (hook, disrupt, reveal, payoff, close\u2026)"
+          },
+          "duration": {
+            "oneOf": [
+              {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              {
+                "const": "auto"
+              }
+            ],
+            "default": "auto"
+          },
+          "minDuration": {
+            "type": "number",
+            "default": 3
+          },
+          "tail": {
+            "type": "number",
+            "default": 0.6,
+            "description": "Seconds held after the VO ends (auto duration)."
+          },
+          "vo": {
+            "type": "string",
+            "description": "Narration for this clip (\u2248 2.4 words per second)."
+          },
+          "voStart": {
+            "type": "number",
+            "default": 0.4
+          },
+          "voSpan": {
+            "type": "boolean",
+            "description": "This VO intentionally runs into the following clips."
+          },
+          "voice": {
+            "type": "object",
+            "description": "Per-clip voice override (e.g. a second character)."
+          },
+          "visual": {
+            "type": "string",
+            "description": "What happens on screen (used by the animator and by `stickman prompts`)."
+          },
+          "beats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "string"
+                },
+                "do": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "sfx": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/sfx"
+            }
+          },
+          "intro": {
+            "type": "object",
+            "description": "Intro title sequence for this clip (no scene code needed). Duration defaults to the preset length; sound effects are added automatically (set sfx:false to skip).",
+            "required": [
+              "style"
+            ],
+            "properties": {
+              "style": {
+                "enum": [
+                  "countdown",
+                  "clapper",
+                  "logo",
+                  "spotlight"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "description": "Supports [accent] markup"
+              },
+              "kicker": {
+                "type": "string"
+              },
+              "subtitle": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string",
+                "description": "Image path in the film folder, a prop name, or \"kino\""
+              },
+              "size": {
+                "type": "number"
+              },
+              "per": {
+                "type": "number",
+                "description": "countdown: seconds per number"
+              },
+              "from": {
+                "type": "integer",
+                "description": "countdown: start number (default 3)"
+              },
+              "scene": {
+                "type": [
+                  "integer",
+                  "string"
+                ]
+              },
+              "take": {
+                "type": [
+                  "integer",
+                  "string"
+                ]
+              },
+              "snapAt": {
+                "type": "number"
+              },
+              "titleFx": {
+                "type": "string"
+              },
+              "bg": {
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "sfx": {
+                "type": "boolean"
+              }
+            }
+          },
+          "outro": {
+            "type": "object",
+            "description": "Outro / end-card sequence for this clip (no scene code needed).",
+            "required": [
+              "style"
+            ],
+            "properties": {
+              "style": {
+                "enum": [
+                  "cta",
+                  "credits",
+                  "endcard",
+                  "kino"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "tagline": {
+                "type": "string"
+              },
+              "cta": {
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "url": {
+                "type": "string"
+              },
+              "logo": {
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "credits": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "videos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "d": {
+                "type": "number"
+              },
+              "confetti": {
+                "type": "boolean"
+              },
+              "sfx": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "sfx": {
+      "type": "object",
+      "required": [
+        "at",
+        "name"
+      ],
+      "properties": {
+        "at": {
+          "type": "number",
+          "description": "Seconds (local to the clip, or global for film-level sfx)."
+        },
+        "name": {
+          "type": "string",
+          "description": "Built-in (pop, whoosh, ding, success, \u2026) or a file path inside the film folder."
+        },
+        "volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "default": 0.5
+        }
+      }
+    }
+  }
+}

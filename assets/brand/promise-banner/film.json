@@ -1,0 +1,8 @@
+{
+  "title": "Stickman Kino promise banner",
+  "size": [1600, 520],
+  "theme": "light",
+  "voice": { "provider": "none" },
+  "music": { "style": "none" },
+  "clips": [{ "id": "banner", "duration": 2 }]
+}

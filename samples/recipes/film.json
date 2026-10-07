@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Stickman Kino \u2014 recipe book",
+  "format": "16:9",
+  "theme": "light",
+  "voice": {
+    "provider": "none"
+  },
+  "music": {
+    "style": "none"
+  },
+  "clips": [
+    {
+      "id": "intro",
+      "label": "intro",
+      "duration": 5
+    },
+    {
+      "id": "idea",
+      "label": "idea",
+      "duration": 5
+    },
+    {
+      "id": "explain-chart",
+      "label": "explain-chart",
+      "duration": 5
+    },
+    {
+      "id": "pile-up",
+      "label": "pile-up",
+      "duration": 5
+    },
+    {
+      "id": "before-after",
+      "label": "before-after",
+      "duration": 5
+    },
+    {
+      "id": "process",
+      "label": "process",
+      "duration": 5
+    },
+    {
+      "id": "desk-code",
+      "label": "desk-code",
+      "duration": 5
+    },
+    {
+      "id": "big-number",
+      "label": "big-number",
+      "duration": 5
+    },
+    {
+      "id": "montage",
+      "label": "montage",
+      "duration": 5
+    },
+    {
+      "id": "climb",
+      "label": "climb",
+      "duration": 5
+    },
+    {
+      "id": "throw-catch",
+      "label": "throw-catch",
+      "duration": 5
+    },
+    {
+      "id": "conversation",
+      "label": "conversation",
+      "duration": 5
+    },
+    {
+      "id": "checklist",
+      "label": "checklist",
+      "duration": 5
+    },
+    {
+      "id": "phone-demo",
+      "label": "phone-demo",
+      "duration": 5
+    },
+    {
+      "id": "journey",
+      "label": "journey",
+      "duration": 5
+    },
+    {
+      "id": "weigh",
+      "label": "weigh",
+      "duration": 5
+    },
+    {
+      "id": "end-card",
+      "label": "end-card",
+      "duration": 5
+    }
+  ]
+}

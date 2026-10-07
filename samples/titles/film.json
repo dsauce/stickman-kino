@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Stickman Kino - intro & outro presets",
+  "format": "16:9",
+  "theme": "light",
+  "voice": { "provider": "none" },
+  "music": { "style": "pop", "volume": 1, "lufs": -24 },
+  "clips": [
+    { "id": "countdown", "intro": { "style": "countdown", "title": "Your [Film] Here", "kicker": "intro · countdown", "subtitle": "a film-leader 3-2-1 with a slam title" } },
+    { "id": "clapper", "intro": { "style": "clapper", "title": "Scene One", "scene": 1, "take": 3 } },
+    { "id": "logo", "intro": { "style": "logo", "logo": "rocket", "title": "Launch Day", "subtitle": "intro · logo reveal" } },
+    { "id": "spotlight", "intro": { "style": "spotlight", "title": "And now… [the star]", "kicker": "intro · spotlight" } },
+    { "id": "cta", "outro": { "style": "cta", "logo": "lightbulb", "title": "Got an [idea]?", "tagline": "outro · call to action", "cta": "Try it free", "url": "example.com/start" } },
+    { "id": "credits", "outro": { "style": "credits", "d": 5, "title": "The End", "credits": [["Written by", "a curious human"], ["Directed by", "an AI agent"], ["Starring", "a stick figure"], ["Rendered with", "Stickman Kino"]] } },
+    { "id": "endcard", "outro": { "style": "endcard", "title": "Watch next", "videos": ["How it works", "10 tips"], "cta": "Subscribe" } },
+    { "id": "kino", "outro": { "style": "kino", "url": "github.com/dsauce/stickman-kino" } }
+  ]
+}

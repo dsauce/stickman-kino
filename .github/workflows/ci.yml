@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push: { branches: [main] }
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Unit tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { node: [18, 20, 22] }
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: "${{ matrix.node }}", cache: npm }
+      - run: npm ci
+      - run: npm test
+      - run: node bin/stickman.mjs list props
+
+  render-smoke:
+    name: Check + snapshot + render (no voice)
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Install Chromium
+        run: npx --yes playwright@1 install --with-deps chromium-headless-shell
+      - run: node bin/stickman.mjs setup --no-tts
+      - run: node bin/stickman.mjs check samples/recipes
+      - run: node bin/stickman.mjs snapshot samples/gallery --at 2.85,5.35,10.85,15.85
+      - run: node bin/stickman.mjs render samples/recipes --quality draft --out renders/recipes.mp4
+      - uses: actions/upload-artifact@v7
+        with:
+          name: smoke-output
+          path: |
+            samples/gallery/snapshots/
+            renders/recipes.mp4

@@ -1,0 +1,64 @@
+{
+  "name": "stickman-kino",
+  "version": "1.0.0",
+  "description": "Stickman explainer films, directed by your AI agent and rendered as code. No video-generation APIs: agent skills + animation engine + CLI for Claude Code, Codex, Cursor, Gemini CLI and friends.",
+  "keywords": [
+    "stickman",
+    "stick-figure",
+    "animation",
+    "explainer-video",
+    "motion-graphics",
+    "claude-code",
+    "codex",
+    "agent-skills",
+    "hyperframes",
+    "gsap",
+    "text-to-video"
+  ],
+  "homepage": "https://github.com/dsauce/stickman-kino#readme",
+  "bugs": {
+    "url": "https://github.com/dsauce/stickman-kino/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsauce/stickman-kino.git"
+  },
+  "license": "MIT",
+  "author": "Prerit Ahuja (https://github.com/dsauce)",
+  "type": "module",
+  "bin": {
+    "stickman": "bin/stickman.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "engine/",
+    "skills/",
+    "schema/",
+    "samples/hello-stickman/",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "doctor": "node bin/stickman.mjs doctor",
+    "setup": "node bin/stickman.mjs setup",
+    "gallery": "node bin/stickman.mjs build samples/gallery"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "ffmpeg-static": "^5.2.0",
+    "gsap": "^3.13.0",
+    "hyperframes": "0.8.43"
+  },
+  "devDependencies": {
+    "@fontsource/caveat": "^5.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/permanent-marker": "^5.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Stickman Kino - catalogue gallery",
+  "format": "16:9",
+  "theme": "light",
+  "voice": { "provider": "none" },
+  "music": { "style": "none" },
+  "clips": [
+    { "id": "poses", "label": "Poses", "duration": 3 },
+    { "id": "props1", "label": "Props 1/2", "duration": 2.5 },
+    { "id": "props2", "label": "Props 2/2", "duration": 2.5 },
+    { "id": "characters", "label": "Characters", "duration": 3 },
+    { "id": "charts", "label": "Charts & diagrams", "duration": 5 },
+    { "id": "diagrams", "label": "More diagrams", "duration": 5 },
+    { "id": "type", "label": "Typography", "duration": 5 },
+    { "id": "fx", "label": "Effects", "duration": 3 },
+    { "id": "th-light", "label": "Theme light", "duration": 2.5 },
+    { "id": "th-dark", "label": "Theme dark", "duration": 2.5 },
+    { "id": "th-paper", "label": "Theme paper", "duration": 2.5 },
+    { "id": "th-chalkboard", "label": "Theme chalkboard", "duration": 2.5 },
+    { "id": "th-blueprint", "label": "Theme blueprint", "duration": 2.5 },
+    { "id": "th-neon", "label": "Theme neon", "duration": 2.5 },
+    { "id": "th-studio", "label": "Theme studio", "duration": 2.5 },
+    { "id": "th-sunset", "label": "Theme sunset", "duration": 2.5 },
+    { "id": "worlds", "label": "Environments", "duration": 3 }
+  ]
+}

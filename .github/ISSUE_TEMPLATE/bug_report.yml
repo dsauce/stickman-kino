@@ -1,0 +1,26 @@
+name: 🐞 Bug report
+description: Something renders wrong, a command fails, or a skill misbehaves
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Include what you expected instead. }
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes: { label: Steps to reproduce, description: Commands you ran. Attach a minimal film.json + scenes.js if it's a rendering issue., render: shell }
+    validations: { required: true }
+  - type: textarea
+    id: doctor
+    attributes: { label: "`node bin/stickman.mjs doctor` output", render: text }
+    validations: { required: true }
+  - type: dropdown
+    id: os
+    attributes: { label: OS, options: [macOS, Linux, Windows, WSL2, Other] }
+    validations: { required: true }
+  - type: input
+    id: agent
+    attributes: { label: Agent (if relevant), placeholder: "Claude Code / Codex / Cursor / Gemini CLI / none" }
+  - type: textarea
+    id: media
+    attributes: { label: Screenshots / snapshot frames, description: A contact sheet or frame makes visual bugs much faster to fix. }

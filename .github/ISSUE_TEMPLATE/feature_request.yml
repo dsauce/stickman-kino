@@ -1,0 +1,14 @@
+name: ✨ Feature request
+description: A new capability for the engine, CLI or skills
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: What are you trying to make?, description: Describe the video/moment you couldn't create. }
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes: { label: Proposed solution, description: API sketch, film.json field, or skill behaviour. }
+  - type: textarea
+    id: alt
+    attributes: { label: Alternatives / workarounds you tried }

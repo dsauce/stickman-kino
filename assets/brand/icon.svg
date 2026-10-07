@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Stickman Kino</title>
+  <rect width="512" height="512" rx="112" fill="#111111"/>
+  <g fill="#FFFFFF">
+    <rect x="70" y="58" width="44" height="30" rx="8"/><rect x="146" y="58" width="44" height="30" rx="8"/><rect x="222" y="58" width="44" height="30" rx="8"/><rect x="298" y="58" width="44" height="30" rx="8"/><rect x="374" y="58" width="44" height="30" rx="8"/>
+    <rect x="70" y="424" width="44" height="30" rx="8"/><rect x="146" y="424" width="44" height="30" rx="8"/><rect x="222" y="424" width="44" height="30" rx="8"/><rect x="298" y="424" width="44" height="30" rx="8"/><rect x="374" y="424" width="44" height="30" rx="8"/>
+    <rect x="56" y="112" width="400" height="288" rx="26"/>
+  </g>
+  <g stroke="#E63946" stroke-width="16" stroke-linecap="round">
+    <line x1="92" y1="214" x2="150" y2="214"/><line x1="78" y1="256" x2="150" y2="256"/><line x1="100" y1="298" x2="152" y2="298"/>
+  </g>
+  <g fill="none" stroke="#111111" stroke-width="17" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="300" cy="170" r="30" fill="#FFFFFF"/>
+    <path d="M290 202 L262 292"/>
+    <path d="M285 222 L330 246 L360 212"/>
+    <path d="M285 222 L238 238 L212 274"/>
+    <path d="M262 292 L312 326 L322 378"/>
+    <path d="M262 292 L222 334 L182 344"/>
+  </g>
+  <path d="M392 136 Q396 160 420 164 Q396 168 392 192 Q388 168 364 164 Q388 160 392 136 Z" fill="#F2B400"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "The two-minute rule",
+  "format": "9:16",
+  "theme": "dark",
+  "captions": "pop",
+  "voice": { "provider": "kokoro", "voice": "af_heart", "speed": 1.0 },
+  "music": { "style": "lofi", "volume": 1 },
+  "clips": [
+    { "id": "hook", "label": "Golden hook", "duration": "auto", "vo": "Can't start a new habit? Make it so small, it takes two minutes.",
+      "sfx": [{ "at": 2.4, "name": "slide", "volume": 0.4 }, { "at": 3.3, "name": "tick", "volume": 0.5 }] },
+    { "id": "examples", "label": "Make it tiny", "duration": "auto", "vo": "Want to read more? Read one page. Want to run? Just put on your shoes.",
+      "sfx": [{ "at": 1.4, "name": "page", "volume": 0.4 }, { "at": 3.7, "name": "pop", "volume": 0.4 }] },
+    { "id": "momentum", "label": "Momentum", "duration": "auto", "vo": "Starting is the hard part. Once you begin, momentum carries you.",
+      "sfx": [{ "at": 2.6, "name": "whoosh", "volume": 0.4 }] },
+    { "id": "close", "label": "Close", "duration": "auto", "tail": 1.6, "vo": "Master showing up first. Then improve. What's your two minute habit?",
+      "sfx": [{ "at": 0.8, "name": "tick" }, { "at": 1.4, "name": "tick" }, { "at": 2.0, "name": "tick" }, { "at": 3.2, "name": "success", "volume": 0.4 }] }
+  ]
+}

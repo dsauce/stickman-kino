@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Hello, Stickman",
+  "format": "16:9",
+  "theme": "light",
+  "voice": { "provider": "kokoro", "voice": "am_michael", "speed": 1.0 },
+  "music": { "style": "playful", "volume": 1 },
+  "clips": [
+    { "id": "meet", "label": "Meet Kino", "duration": "auto", "vo": "Meet Kino. A stick figure who just learned to walk.", "sfx": [{ "at": 2.6, "name": "pop", "volume": 0.4 }] },
+    { "id": "idea", "label": "Explain", "duration": "auto", "vo": "Give him an idea, and he will explain it with props, charts, and a little drama.", "sfx": [{ "at": 0.9, "name": "ding", "volume": 0.4 }, { "at": 4.4, "name": "boing", "volume": 0.3 }] },
+    { "id": "you", "label": "Your turn", "duration": "auto", "tail": 1.6, "vo": "That is all it takes. Now it is your turn.", "sfx": [{ "at": 0.6, "name": "success", "volume": 0.4 }] }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Why compound interest feels like magic",
+  "format": "16:9",
+  "theme": "paper",
+  "voice": { "provider": "kokoro", "voice": "bm_george", "speed": 0.95 },
+  "music": { "style": "calm-piano", "volume": 1 },
+  "clips": [
+    { "id": "hook", "label": "Golden hook", "duration": "auto", "vo": "Put one hundred dollars away today. In forty years, it could be worth over two thousand. Without adding a single cent.",
+      "visual": "A piggy bank receives one coin; a counter races from 100 to 2,172 while the figure gasps.", "sfx": [{ "at": 0.9, "name": "coin", "volume": 0.5 }, { "at": 3.5, "name": "rise", "volume": 0.25 }] },
+    { "id": "myth", "label": "Disrupt", "duration": "auto", "vo": "Most people think wealth comes from big wins. It mostly comes from small amounts, and a lot of time.",
+      "visual": "A lottery-style jackpot gets crossed out; a tiny coin and a long calendar take its place.", "sfx": [{ "at": 2.6, "name": "stamp", "volume": 0.45 }] },
+    { "id": "snowball", "label": "Secret", "duration": "auto", "vo": "Here is the trick. Your interest starts earning interest of its own, like a snowball rolling downhill.",
+      "visual": "The figure pushes a snowball off a hilltop; it rolls down and grows as it goes.", "sfx": [{ "at": 2.4, "name": "whoosh", "volume": 0.35 }] },
+    { "id": "numbers", "label": "Truth", "duration": "auto", "vo": "In year one, you earn eight dollars. By year thirty, that same hundred earns over seventy dollars a year.",
+      "visual": "Two bars compare year 1 and year 30 interest; the figure points as the second bar towers.", "sfx": [{ "at": 1.2, "name": "pop", "volume": 0.4 }, { "at": 4.4, "name": "pop", "volume": 0.4 }] },
+    { "id": "curve", "label": "Truth II", "duration": "auto", "vo": "The curve stays flat for years, then bends sharply upward. Most people quit right before the bend.",
+      "visual": "A growth curve draws itself; a figure walks along it and turns back just before the steep part.", "sfx": [] },
+    { "id": "close", "label": "Elevation", "duration": "auto", "tail": 1.8, "vo": "The best time to start was yesterday. The second best time is today. So, what will you start compounding?",
+      "visual": "A seedling grows into a tree beside the figure; a question mark pops.", "sfx": [{ "at": 3.2, "name": "chime", "volume": 0.4 }] }
+  ]
+}

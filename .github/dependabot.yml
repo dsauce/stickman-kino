@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule: { interval: monthly }
+    groups: { all: { patterns: ["*"] } }
+    ignore:
+      # the renderer is pinned on purpose so every film renders identically; bump it by hand after re-rendering the samples
+      - dependency-name: hyperframes
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: monthly }

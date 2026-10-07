@@ -1,0 +1,26 @@
+node_modules/
+.stickman/
+videos/
+*.log
+.DS_Store
+Thumbs.db
+
+# generated per film (rebuilt by `stickman compose` / `audio` / `render`)
+**/.sm/
+samples/*/index.html
+samples/*/film.js
+samples/*/renders/
+samples/*/snapshots/
+samples/*/assets/vo/
+samples/*/assets/music/
+samples/*/assets/sfx/
+samples/*/assets/audio.json
+samples/*/prompts.md
+assets/brand/social-card/index.html
+assets/brand/social-card/film.js
+assets/brand/social-card/snapshots/
+assets/brand/social-card/assets/
+assets/brand/promise-banner/index.html
+assets/brand/promise-banner/film.js
+assets/brand/promise-banner/snapshots/
+assets/brand/promise-banner/assets/

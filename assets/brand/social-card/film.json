@@ -1,0 +1,8 @@
+{
+  "title": "Stickman Kino - social preview",
+  "size": [1280, 640],
+  "theme": "light",
+  "voice": { "provider": "none" },
+  "music": { "style": "none" },
+  "clips": [{ "id": "card", "duration": 2 }]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/film.schema.json",
+  "title": "Stickman Kino - showcase",
+  "format": "16:9",
+  "theme": "light",
+  "voice": { "provider": "kokoro", "voice": "am_michael", "speed": 1.0 },
+  "music": { "style": "uplifting", "volume": 1 },
+  "clips": [
+    { "id": "hook", "label": "Golden hook", "duration": "auto", "vo": "What if your AI agent could direct a whole film, starring a stick figure?",
+      "visual": "A clapperboard drops onto an empty stage; a stick figure pops in under a spotlight and reacts with surprise.",
+      "sfx": [{ "at": 0.55, "name": "thud", "volume": 0.5 }, { "at": 1.1, "name": "pop", "volume": 0.45 }, { "at": 3.2, "name": "boing", "volume": 0.3 }] },
+    { "id": "pain", "label": "Disrupt", "duration": "auto", "vo": "Normally, that means stock footage, a timeline editor, and a weekend lost to keyframes.",
+      "visual": "Documents and clocks rain down and pile up around the figure; labels for stock footage, timeline and weekend appear; a red cross stamps the pile.",
+      "sfx": [{ "at": 0.6, "name": "page", "volume": 0.4 }, { "at": 5.4, "name": "stamp", "volume": 0.5 }] },
+    { "id": "flip", "label": "Secret", "duration": "auto", "vo": "Stickman Kino flips it. You write the story. Your agent writes every scene as code.",
+      "visual": "The figure types at a desk; a flow of story, code and film builds while lines of code type out.",
+      "sfx": [{ "at": 0.5, "name": "whoosh", "volume": 0.4 }, { "at": 2.0, "name": "keyboard", "volume": 0.35 }, { "at": 4.0, "name": "keyboard", "volume": 0.35 }] },
+    { "id": "power", "label": "Truth", "duration": "auto", "vo": "Fifty poses. Nearly two hundred props. Charts, captions, camera moves, and a real voice.",
+      "visual": "The figure sprints down a road while a checklist of features pops in beside it.",
+      "sfx": [{ "at": 0.6, "name": "pop" }, { "at": 1.7, "name": "pop" }, { "at": 3.0, "name": "pop" }, { "at": 4.0, "name": "pop" }, { "at": 5.0, "name": "pop" }, { "at": 6.0, "name": "pop" }] },
+    { "id": "themeA", "label": "Theme switch 1", "duration": 2.5, "voSpan": true, "vo": "Change the theme, the format, or the script, and the whole film re-renders.", "sfx": [{ "at": 0.1, "name": "swoosh", "volume": 0.4 }] },
+    { "id": "themeB", "label": "Theme switch 2", "duration": 2.3, "sfx": [{ "at": 0.05, "name": "swoosh", "volume": 0.4 }] },
+    { "id": "themeC", "label": "Theme switch 3", "duration": 2.6, "sfx": [{ "at": 0.05, "name": "swoosh", "volume": 0.4 }] },
+    { "id": "outro", "label": "Elevation", "duration": "auto", "tail": 2.2, "vo": "Stickman Kino. Clone it, ask your agent, and ship the film. So, what will your stick figure explain first?",
+      "visual": "Logo and wordmark lock up; the figure celebrates with confetti, then lifts a big question mark.",
+      "sfx": [{ "at": 0.5, "name": "chime", "volume": 0.45 }, { "at": 3.6, "name": "success", "volume": 0.4 }] }
+  ]
+}
