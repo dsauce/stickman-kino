@@ -226,19 +226,31 @@ Ideas? [Open a feature request](https://github.com/dsauce/stickman-kino/issues/n
 
 New props, poses, characters, music styles and recipes are the easiest wins, and each one shows up in everyone's next film. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## 👋 Author
+
+Stickman Kino is created and maintained by **Prerit Ahuja**.
+
+<a href="https://preritahuja.com/"><img src="https://img.shields.io/badge/website-preritahuja.com-111?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website: preritahuja.com"></a>
+<a href="https://www.linkedin.com/in/ahujaprerit/"><img src="https://img.shields.io/badge/LinkedIn-ahujaprerit-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn: ahujaprerit"></a>
+<a href="https://github.com/dsauce"><img src="https://img.shields.io/badge/GitHub-dsauce-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub: dsauce"></a>
+
+Questions, ideas or a cool film you made? Say hi on [LinkedIn](https://www.linkedin.com/in/ahujaprerit/) or open a [Discussion](https://github.com/dsauce/stickman-kino/discussions).
+
 ## 🙏 Credits
 
 Rendering by [HyperFrames](https://github.com/heygen-com/hyperframes) (Apache-2.0) · animation by [GSAP](https://gsap.com) (installed from npm, not redistributed) · voice by [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (Apache-2.0) · fonts Inter, Caveat and Permanent Marker (OFL). The five-beat story arc and the optional AI-video prompt format are inspired by [kaomei/stickman-video-director](https://github.com/kaomei/stickman-video-director) (MIT). Full list in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## 📄 License
 
-[MIT](LICENSE) © Prerit Ahuja. Use it for anything, commercial included. Music and SFX made by Stickman Kino are generated from scratch and are yours. *Chorus is a fictional product invented for the demo.*
+[MIT](LICENSE) © [Prerit Ahuja](https://preritahuja.com/). Use it for anything, commercial included. Music and SFX made by Stickman Kino are generated from scratch and are yours. *Chorus is a fictional product invented for the demo.*
 
 ---
 
 <div align="center">
 
 **If Stickman Kino saved you a weekend (or a video budget), a ⭐ helps others find it.**
+
+<sub>Built by <a href="https://preritahuja.com/">Prerit Ahuja</a> · <a href="https://www.linkedin.com/in/ahujaprerit/">LinkedIn</a> · <a href="https://github.com/dsauce">GitHub</a></sub>
 
 <a href="https://github.com/dsauce/stickman-kino/stargazers"><img src="https://img.shields.io/github/stars/dsauce/stickman-kino?style=social" alt="Star on GitHub"></a>
 

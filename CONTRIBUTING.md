@@ -2,6 +2,8 @@
 
 Thanks for helping stick figures take over the internet. 🕺
 
+Stickman Kino is maintained by [Prerit Ahuja](https://preritahuja.com/) ([LinkedIn](https://www.linkedin.com/in/ahujaprerit/)).
+
 ## Ground rules
 
 - Be kind. See the [Code of Conduct](CODE_OF_CONDUCT.md).

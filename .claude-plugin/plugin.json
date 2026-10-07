@@ -2,9 +2,18 @@
   "name": "stickman-kino",
   "version": "1.0.0",
   "description": "Stickman films, directed by your AI agent, rendered as code: director, animator, sound and producer skills plus a local animation engine.",
-  "author": { "name": "Prerit Ahuja", "url": "https://github.com/dsauce" },
+  "author": {
+    "name": "Prerit Ahuja",
+    "url": "https://preritahuja.com/"
+  },
   "homepage": "https://github.com/dsauce/stickman-kino",
   "repository": "https://github.com/dsauce/stickman-kino",
   "license": "MIT",
-  "keywords": ["stickman", "video", "animation", "explainer", "skills"]
+  "keywords": [
+    "stickman",
+    "video",
+    "animation",
+    "explainer",
+    "skills"
+  ]
 }

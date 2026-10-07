@@ -1,7 +1,14 @@
 {
   "name": "stickman-kino",
-  "owner": { "name": "Prerit Ahuja", "url": "https://github.com/dsauce" },
+  "owner": {
+    "name": "Prerit Ahuja",
+    "url": "https://preritahuja.com/"
+  },
   "plugins": [
-    { "name": "stickman-kino", "source": "./", "description": "Make stickman explainer films end to end with your agent: script, storyboard, voice, music, animation, render." }
+    {
+      "name": "stickman-kino",
+      "source": "./",
+      "description": "Make stickman explainer films end to end with your agent: script, storyboard, voice, music, animation, render."
+    }
   ]
 }

@@ -24,7 +24,10 @@
     "url": "git+https://github.com/dsauce/stickman-kino.git"
   },
   "license": "MIT",
-  "author": "Prerit Ahuja (https://github.com/dsauce)",
+  "author": {
+    "name": "Prerit Ahuja",
+    "url": "https://preritahuja.com/"
+  },
   "type": "module",
   "bin": {
     "stickman": "bin/stickman.mjs"
