@@ -17,4 +17,4 @@ node bin/stickman.mjs build samples/<name>        # → samples/<name>/renders/<
 | [`recipes`](recipes) | 16:9 · light · 17 × 5 s | The tested cookbook: one scene per recipe (generates `skills/stickman-animator/references/cookbook.md`). |
 | [`gallery`](gallery) | 16:9 · all themes | Catalogue stills: every pose, prop, character, chart, diagram, text effect, FX, theme and environment. |
 
-Rendered previews live in [`docs/media`](../docs/media) and [`docs/images`](../docs/images).
+Watch them all on the [film page](https://dsauce.github.io/stickman-kino/). Rendered files live in [`docs/media`](../docs/media).

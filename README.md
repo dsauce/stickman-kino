@@ -22,7 +22,7 @@
 <a href="https://dsauce.github.io/stickman-kino/#chorus"><img src="docs/images/chorus.gif" alt="Chorus - a 58-second stickman ad made with Stickman Kino" width="860"></a>
 
 **▲ "Chorus", a 58-second ad for a made-up app.** Script, storyboard, voice, music, animation and edit were produced by an AI agent running Stickman Kino, from a short brief.<br>
-<sub>Every frame is code. <a href="https://dsauce.github.io/stickman-kino/#chorus"><b>▶ Watch with sound</b></a> · <a href="samples/chorus/film.json">film.json</a> · <a href="samples/chorus/scenes.js">scenes.js</a></sub>
+<sub>Every frame is code. <a href="https://dsauce.github.io/stickman-kino/#chorus"><b>▶ Watch with sound</b></a> · <a href="https://dsauce.github.io/stickman-kino/"><b>🍿 All films</b></a> · <a href="samples/chorus/film.json">film.json</a> · <a href="samples/chorus/scenes.js">scenes.js</a></sub>
 
 </div>
 
@@ -117,6 +117,8 @@ Four battle-tested skills (director, animator, sound, producer) teach any coding
 </div>
 
 ## 🍿 More films made with Stickman Kino
+
+▶ **Watch them all with sound on the [film page](https://dsauce.github.io/stickman-kino/).**
 
 | Hello, Stickman · 15 s | Compound interest · 50 s | The 2-minute rule · 9:16 | Showcase · 44 s |
 |:---:|:---:|:---:|:---:|
