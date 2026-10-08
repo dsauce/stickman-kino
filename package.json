@@ -38,11 +38,12 @@
     "engine/",
     "skills/",
     "schema/",
-    "samples/hello-stickman/",
     "README.md",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "samples/hello-stickman/film.json",
+    "samples/hello-stickman/scenes.js"
   ],
   "scripts": {
     "test": "node --test test/*.test.mjs",
