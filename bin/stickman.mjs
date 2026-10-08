@@ -15,6 +15,17 @@ for (let i = 1; i < argv.length; i++) {
   else pos.push(a);
 }
 const dirArg = () => path.resolve(pos[0] || ".");
+// HyperFrames writes every frame to disk before encoding (~9 MB per 1080p frame). If the output disk
+// can't hold that, switch to its streaming low-memory mode instead of failing.
+function diskArgs(outFile, total, fps, W, H) {
+  if (opt["low-memory"]) return ["--low-memory-mode"];
+  try {
+    const st = fs.statfsSync(path.dirname(outFile)), free = st.bavail * st.bsize;
+    const need = total * fps * 9e6 * (W * H) / (1920 * 1080);
+    if (free < need * 1.2) { warn(`low disk space (${(free / 1e9).toFixed(1)} GB free, ~${(need / 1e9).toFixed(1)} GB needed for frames): rendering in low-memory mode`); return ["--low-memory-mode"]; }
+  } catch {}
+  return [];
+}
 const passthrough = () => { const i = argv.indexOf("--"); return i >= 0 ? argv.slice(i + 1) : []; };
 
 const HELP = `
@@ -28,7 +39,7 @@ ${c.b("Make a film")}
   stickman check <dir>                           lint + runtime + layout checks (HyperFrames)
   stickman snapshot <dir> [--at 1,4.5,9]         PNG frames + contact sheet for visual review
   stickman preview <dir>                         live studio in the browser
-  stickman render <dir> [--quality draft|looks|delivery] [--out file.mp4] [--format mp4|webm|gif] [--fps 30]
+  stickman render <dir> [--quality draft|looks|delivery] [--out file.mp4] [--format mp4|webm|gif] [--fps 30] [--low-memory]
   stickman gif <dir> [--from 0 --to 8 --width 640 --fps 12]   README-ready GIF from the render
   stickman poster <dir> [--at 3]                 JPG still from the render
   stickman prompts <dir>                         export text-to-video prompts (Gemini/Veo/Sora/Kling)
@@ -67,10 +78,10 @@ async function main() {
     }
     case "preview": { const { compose } = await import("../lib/film.mjs"); compose(dirArg()); return hf(["preview", ...passthrough()], dirArg()); }
     case "render": {
-      const { compose, loadFilm } = await import("../lib/film.mjs"); const dir = dirArg(); compose(dir);
-      const film = loadFilm(dir), fmt = opt.format || "mp4", slug = path.basename(dir);
+      const { compose, loadFilm } = await import("../lib/film.mjs"); const dir = dirArg(); const r = compose(dir);
+      const film = loadFilm(dir), fmt = opt.format || "mp4", slug = path.basename(dir), fps = +(opt.fps || film.fps || 30);
       const out = path.resolve(opt.out || path.join(dir, "renders", `${slug}.${fmt === "gif" ? "gif" : fmt}`)); fs.mkdirSync(path.dirname(out), { recursive: true });
-      const args = ["render", "--quality", opt.quality || "looks", "--output", out, "--fps", String(opt.fps || film.fps || 30)];
+      const args = ["render", "--quality", opt.quality || "looks", "--output", out, "--fps", String(fps), ...diskArgs(out, r.total, fps, r.W, r.H)];
       if (fmt !== "mp4") args.push("--format", fmt); if (opt.workers) args.push("--workers", String(opt.workers));
       const code = await hf(args.concat(passthrough()), dir);
       if (code === 0) ok(`rendered ${path.relative(process.cwd(), out)}`); return code;
@@ -82,8 +93,9 @@ async function main() {
       const chk = await hf(["check"], dir); if (chk !== 0 && !opt["ignore-check"]) { fail("check failed - fix the errors above (or pass --ignore-check)"); return chk; }
       if (opt["no-render"]) return 0;
       const slug = path.basename(dir), out = path.join(dir, "renders", `${slug}.mp4`); fs.mkdirSync(path.dirname(out), { recursive: true });
-      const code = await hf(["render", "--quality", opt.quality || "looks", "--output", out, "--fps", String(opt.fps || 30)], dir);
-      if (code === 0) ok(`film ready → ${path.relative(process.cwd(), out)}`); return code;
+      const fps = +(opt.fps || 30);
+      const code = await hf(["render", "--quality", opt.quality || "looks", "--output", out, "--fps", String(fps), ...diskArgs(out, r.total, fps, r.W, r.H)], dir);
+      if (code === 0) ok(`film ready → ${path.relative(process.cwd(), out)}`); else fail("render failed (see the message above; `--low-memory` forces streaming mode)"); return code;
     }
     case "gif": {
       const dir = dirArg(), src = opt.src || path.join(dir, "renders", path.basename(dir) + ".mp4"); if (!fs.existsSync(src)) { fail("render the film first: " + src); return 1; }

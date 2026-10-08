@@ -24,6 +24,9 @@ You edited `index.html` by hand or `scenes.js` doesn't call `SM.film()`. Re-run 
 **Render stalls with "Navigation timeout" (WSL)**
 Orphaned headless browsers hold the software-GL context: `pkill -f chrome-headless-shell; pkill -f chrome-linux`. Then retry with `--workers 2`.
 
+**"Disk capture may need ~14000 MB of temporary frame storage"**
+HyperFrames stores every frame before encoding (about 9 MB per 1080p frame, so roughly 14 GB for a one-minute film). `stickman render` and `stickman build` switch to streaming low-memory mode automatically when the disk is too small; force it with `--low-memory`.
+
 **Render is slow**
 WSL2 / no GPU renders via software GL (~2-3 min per minute of 1080p). Use `--quality draft` while iterating, snapshots for layout work, and render `looks`/`delivery` once.
 

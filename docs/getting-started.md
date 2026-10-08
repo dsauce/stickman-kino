@@ -72,7 +72,7 @@ Open the repo in Claude Code / Codex / Cursor / Gemini CLI and ask for a film. S
 | `stickman check <dir>` | HyperFrames lint, runtime, layout, motion and contrast checks |
 | `stickman snapshot <dir> [--at 1,4.5,9]` | PNGs + contact sheets (defaults: two moments per clip) |
 | `stickman preview <dir>` | live studio |
-| `stickman render <dir> [--quality draft\|looks\|delivery] [--format mp4\|webm\|gif] [--fps 30] [--out file] [--workers n]` | render |
+| `stickman render <dir> [--quality draft\|looks\|delivery] [--format mp4\|webm\|gif] [--fps 30] [--out file] [--workers n] [--low-memory]` | render (switches to low-memory streaming automatically when disk space is short) |
 | `stickman build <dir> [--quality] [--no-render] [--ignore-check]` | everything |
 | `stickman gif <dir> [--from 0 --to 8 --width 640 --fps 12]` | GIF from the render |
 | `stickman poster <dir> [--at 3]` | JPG still |
