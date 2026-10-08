@@ -8,6 +8,7 @@
 No video-generation model, no video API, renders locally.
 
 [![CI](https://github.com/dsauce/stickman-kino/actions/workflows/ci.yml/badge.svg)](https://github.com/dsauce/stickman-kino/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/stickman-kino.svg)](https://www.npmjs.com/package/stickman-kino)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a.svg)](LICENSE)
 ![Node 18+](https://img.shields.io/badge/node-18%2B-339933?logo=node.js&logoColor=white)
 
@@ -132,6 +133,15 @@ node bin/stickman.mjs install-skills    # copies the skills to ~/.claude/skills,
 ```
 
 Claude Code can also load it as a plugin: `/plugin marketplace add dsauce/stickman-kino`.
+
+Or install the CLI from npm, without cloning:
+
+```bash
+npm install -g stickman-kino
+stickman setup
+stickman install-skills    # makes the skills available to your agent in any folder
+stickman new videos/my-film
+```
 
 <details>
 <summary><b>Writing scenes by hand</b></summary>
