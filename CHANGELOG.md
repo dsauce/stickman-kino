@@ -4,6 +4,9 @@ All notable changes are documented here. The format follows [Keep a Changelog](h
 
 ## [Unreleased]
 
+### Fixed
+- **Windows**: Kokoro voice-over was cut to the first word of each line (~0.7 s clips). HyperFrames is now launched through its JS entry with node instead of the `.cmd` shim, so arguments with spaces are no longer split by the shell.
+
 ## [1.0.0] - 2026-10-02
 
 ### Added
